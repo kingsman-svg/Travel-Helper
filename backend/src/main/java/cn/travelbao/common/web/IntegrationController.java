@@ -37,7 +37,7 @@ public class IntegrationController {
 
     @GetMapping("/health")
     public Map<String, Object> health() {
-        return Map.of("status", "UP", "application", "travelbao-backend", "version", "0.3.0", "stage", "milestone-03");
+        return Map.of("status", "UP", "application", "travelbao-backend", "version", "0.4.0", "stage", "milestone-04");
     }
 
     @GetMapping("/integrations")
@@ -47,7 +47,7 @@ public class IntegrationController {
         integrations.put("tools", status("tools", settings.modelConfigured(), "模型工具调用"));
         integrations.put("mcp", status("mcp", true, "旅游 MCP 服务"));
         integrations.put("embedding", status("embedding", true, settings.embeddingModel()));
-        return Map.of("integrations", integrations, "stage", "milestone-03");
+        return Map.of("integrations", integrations, "stage", "milestone-04");
     }
 
     private Object status(String name, boolean configured, String model) {

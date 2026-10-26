@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class TravelPrompts {
-    public static final String VERSION = "v2";
+    public static final String VERSION = "v3";
     private final ObjectMapper json;
     public TravelPrompts(ObjectMapper json) { this.json = json; }
     public String system(String type) {

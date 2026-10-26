@@ -21,3 +21,35 @@ CREATE TABLE IF NOT EXISTS trips (
     saved_at VARCHAR(40) NOT NULL
 );
 ALTER TABLE conversation_messages ADD COLUMN IF NOT EXISTS citations_json CLOB;
+CREATE TABLE IF NOT EXISTS knowledge_documents (
+    id VARCHAR(100) PRIMARY KEY,
+    city VARCHAR(60) NOT NULL,
+    title VARCHAR(150) NOT NULL,
+    source_url VARCHAR(500) NOT NULL,
+    verified_at VARCHAR(10) NOT NULL,
+    filename VARCHAR(200) NOT NULL,
+    content CLOB NOT NULL,
+    content_hash VARCHAR(64) NOT NULL,
+    origin VARCHAR(30) NOT NULL,
+    status VARCHAR(30) NOT NULL,
+    error_message VARCHAR(300),
+    chunk_count INTEGER NOT NULL DEFAULT 0,
+    created_at VARCHAR(40) NOT NULL,
+    indexed_at VARCHAR(40),
+    UNIQUE(city,content_hash)
+);
+CREATE TABLE IF NOT EXISTS knowledge_chunks (
+    id VARCHAR(140) PRIMARY KEY,
+    document_id VARCHAR(100) NOT NULL REFERENCES knowledge_documents(id),
+    ordinal INTEGER NOT NULL,
+    content CLOB NOT NULL,
+    embedding CLOB NOT NULL
+);
+CREATE TABLE IF NOT EXISTS knowledge_index_state (
+    singleton INTEGER PRIMARY KEY CHECK(singleton=1),
+    model VARCHAR(150) NOT NULL,
+    model_digest VARCHAR(200) NOT NULL,
+    dimensions INTEGER NOT NULL,
+    generation VARCHAR(36) NOT NULL,
+    updated_at VARCHAR(40) NOT NULL
+);

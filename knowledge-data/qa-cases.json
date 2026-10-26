@@ -1,0 +1,98 @@
+[
+  {
+    "id": "rag-01",
+    "city": "杭州",
+    "question": "杭州中国茶叶博物馆双峰馆区和龙井馆区的地址分别是什么？",
+    "expectedDocumentId": "hangzhou-tea-museum",
+    "expectedKeywords": ["龙井路88号", "翁家山268号"],
+    "referenceAnswer": "双峰馆区在龙井路88号，龙井馆区在翁家山268号。"
+  },
+  {
+    "id": "rag-02",
+    "city": "杭州",
+    "question": "根据杭州中国茶叶博物馆参观指南，几点开放、几点结束，常规闭馆日是哪天？",
+    "expectedDocumentId": "hangzhou-tea-museum",
+    "expectedKeywords": ["9:00", "16:30", "周二"],
+    "referenceAnswer": "指南列出9:00至16:30，周二闭馆、节假日开放；行前应复核公告。"
+  },
+  {
+    "id": "rag-03",
+    "city": "杭州",
+    "question": "按资料，个人参观杭州中国丝绸博物馆要线上预约吗？可以用什么证件？",
+    "expectedDocumentId": "hangzhou-silk-museum",
+    "expectedKeywords": ["身份证", "市民卡"],
+    "referenceAnswer": "个人无需线上预约，可用身份证、市民卡等有效证件刷卡，或实名登记。"
+  },
+  {
+    "id": "rag-04",
+    "city": "杭州",
+    "question": "杭州中国丝绸博物馆的团体参观和讲解预约联系电话是什么？",
+    "expectedDocumentId": "hangzhou-silk-museum",
+    "expectedKeywords": ["0571-87035223"],
+    "referenceAnswer": "公告给出的团体参观及预约讲解电话是0571-87035223。"
+  },
+  {
+    "id": "rag-05",
+    "city": "苏州",
+    "question": "江苏苏州拙政园的地址是什么？",
+    "expectedDocumentId": "suzhou-humble-administrator-garden",
+    "expectedKeywords": ["东北街178号"],
+    "referenceAnswer": "拙政园位于苏州市东北街178号。"
+  },
+  {
+    "id": "rag-06",
+    "city": "苏州",
+    "question": "根据苏州园林局资料，拙政园分为哪三个部分？",
+    "expectedDocumentId": "suzhou-humble-administrator-garden",
+    "expectedKeywords": ["东部", "中部", "西部"],
+    "referenceAnswer": "拙政园分为东部、中部、西部。"
+  },
+  {
+    "id": "rag-07",
+    "city": "苏州",
+    "question": "江苏苏州留园现在的门牌地址是什么？",
+    "expectedDocumentId": "suzhou-lingering-garden",
+    "expectedKeywords": ["留园路338号"],
+    "referenceAnswer": "留园现址为苏州市留园路338号，原门牌为79号。"
+  },
+  {
+    "id": "rag-08",
+    "city": "上海",
+    "question": "上海博物馆东馆的地址和常规休馆日是什么？不要混用人民广场馆信息。",
+    "expectedDocumentId": "shanghai-museum-east",
+    "expectedKeywords": ["世纪大道1952号", "周二"],
+    "referenceAnswer": "东馆在浦东新区世纪大道1952号，常规周二休馆，国定节假日除外。"
+  },
+  {
+    "id": "rag-09",
+    "city": "上海",
+    "question": "上海博物馆人民广场馆地址是什么，要从哪条路的哪个门进入？",
+    "expectedDocumentId": "shanghai-museum-peoples-square",
+    "expectedKeywords": ["人民大道201号", "武胜路", "南门"],
+    "referenceAnswer": "人民广场馆在人民大道201号，从武胜路南门进入。"
+  },
+  {
+    "id": "rag-10",
+    "city": "上海",
+    "question": "依据已核对资料，上海博物馆人民广场馆日场几点停止入场？",
+    "expectedDocumentId": "shanghai-museum-peoples-square",
+    "expectedKeywords": ["15:00"],
+    "referenceAnswer": "人民广场馆日场15:00停止入场；夜场和临时安排应另查官方公告。"
+  },
+  {
+    "id": "rag-no-answer-01",
+    "city": "杭州",
+    "question": "现在西湖游船还有多少张余票，最新成人票多少钱？",
+    "expectedDocumentId": null,
+    "expectedKeywords": [],
+    "referenceAnswer": "现有知识库没有西湖游船实时余票或最新票价资料，无法据此确认，应查询官方实时渠道。"
+  },
+  {
+    "id": "rag-no-answer-02",
+    "city": "苏州",
+    "question": "苏州明天下午几点下雨，降水概率是多少？",
+    "expectedDocumentId": null,
+    "expectedKeywords": [],
+    "referenceAnswer": "现有知识库不含实时天气预报，无法确认明天下雨时刻或降水概率，应查询天气服务。"
+  }
+]

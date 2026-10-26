@@ -1,0 +1,50 @@
+[
+  {
+    "id": "hangzhou-tea-museum",
+    "city": "杭州",
+    "title": "中国茶叶博物馆两馆区参观信息",
+    "sourceUrl": "https://www.teamuseum.cn/mobile/basicIntroduction.htm",
+    "verifiedAt": "2026-10-23",
+    "file": "hangzhou/tea-museum.md"
+  },
+  {
+    "id": "hangzhou-silk-museum",
+    "city": "杭州",
+    "title": "中国丝绸博物馆个人与团体参观安排",
+    "sourceUrl": "https://www.chinasilkmuseum.com/cgjyy/info_6.aspx?itemid=31404",
+    "verifiedAt": "2026-10-23",
+    "file": "hangzhou/silk-museum.md"
+  },
+  {
+    "id": "suzhou-humble-administrator-garden",
+    "city": "苏州",
+    "title": "拙政园地址与园内分区",
+    "sourceUrl": "https://ylj.suzhou.gov.cn/szsylj/sjyc/201905/c1df393edc8745abb20e8a9bd5525782.shtml",
+    "verifiedAt": "2026-10-23",
+    "file": "suzhou/humble-administrator-garden.md"
+  },
+  {
+    "id": "suzhou-lingering-garden",
+    "city": "苏州",
+    "title": "留园地址与景区特点",
+    "sourceUrl": "https://ylj.suzhou.gov.cn/szsylj/sjyc/201905/b7c0f2058c75498c9ecbacf234e25b08.shtml",
+    "verifiedAt": "2026-10-23",
+    "file": "suzhou/lingering-garden.md"
+  },
+  {
+    "id": "shanghai-museum-east",
+    "city": "上海",
+    "title": "上海博物馆东馆到访信息",
+    "sourceUrl": "https://www.shanghaimuseum.cn/mu/frontend/pg/service/visit-east",
+    "verifiedAt": "2026-10-23",
+    "file": "shanghai/museum-east.md"
+  },
+  {
+    "id": "shanghai-museum-peoples-square",
+    "city": "上海",
+    "title": "上海博物馆人民广场馆到访信息",
+    "sourceUrl": "https://www.shanghaimuseum.cn/mu/frontend/pg/service/visit-west",
+    "verifiedAt": "2026-10-23",
+    "file": "shanghai/museum-peoples-square.md"
+  }
+]
