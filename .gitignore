@@ -1,0 +1,33 @@
+.DS_Store
+.idea/
+.vscode/
+*.iml
+.env
+.env.*
+!.env.example
+*.log
+**/target/
+**/node_modules/
+**/dist/
+**/coverage/
+*.tsbuildinfo
+.data/*
+!.data/.gitkeep
+work/
+
+# Local releases and private desktop data
+release/
+*.app/
+*.dmg
+*.zip
+*.jar
+*.class
+*.mv.db
+*.trace.db
+configuration.json
+desktop-runtime.json
+*.pem
+*.key
+
+# Ignore dependency directories and local dependency symlinks
+**/node_modules

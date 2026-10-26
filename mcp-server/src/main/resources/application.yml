@@ -1,0 +1,29 @@
+server:
+  address: 127.0.0.1
+  port: ${MCP_PORT:8081}
+spring:
+  application:
+    name: travelbao-mcp
+  ai:
+    mcp:
+      server:
+        name: travelbao-mcp
+        version: 0.1.0
+        type: SYNC
+        protocol: STREAMABLE
+        streamable-http:
+          mcp-endpoint: ${MCP_ENDPOINT:/mcp}
+        capabilities:
+          tool: true
+          resource: false
+          prompt: false
+          completion: false
+logging:
+  level:
+    org.springframework.ai: WARN
+travel:
+  providers:
+    geocoding-url: https://geocoding-api.open-meteo.com/v1/search
+    weather-url: https://api.open-meteo.com/v1/forecast
+    places-url: https://photon.komoot.io/api/
+    route-url: https://valhalla1.openstreetmap.de/route

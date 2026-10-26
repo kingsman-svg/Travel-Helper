@@ -1,0 +1,56 @@
+server:
+  address: 127.0.0.1
+  port: ${BACKEND_PORT:8080}
+  error:
+    include-message: never
+    include-stacktrace: never
+spring:
+  datasource:
+    url: ${TRAVEL_DB_URL:jdbc:h2:file:./.data/db/travelbao;DB_CLOSE_ON_EXIT=FALSE}
+    username: sa
+    password: ""
+  sql:
+    init:
+      mode: always
+  application:
+    name: travelbao-backend
+  mvc:
+    async:
+      request-timeout: 100000
+  servlet:
+    multipart:
+      max-file-size: 256KB
+      max-request-size: 300KB
+  ai:
+    chat:
+      memory:
+        repository:
+          jdbc:
+            initialize-schema: always
+    mcp:
+      client:
+        enabled: false # The lazy McpGateway allows the UI to start before MCP is available.
+travel:
+  agent:
+    max-steps: ${AGENT_MAX_STEPS:6}
+    max-tool-calls: ${AGENT_MAX_TOOL_CALLS:10}
+    timeout-seconds: ${AGENT_TIMEOUT_SECONDS:90}
+  knowledge:
+    chunk-size: 600
+    chunk-overlap: 100
+    top-k: 4
+    min-score: ${KNOWLEDGE_MIN_SCORE:0.50}
+    max-upload-bytes: 262144
+    max-documents: 60
+    examples-path: ${KNOWLEDGE_EXAMPLES_PATH:./knowledge-data}
+  deepseek-base-url: ${DEEPSEEK_BASE_URL:https://api.deepseek.com}
+  deepseek-api-key: ${DEEPSEEK_API_KEY:}
+  model: ${DEEPSEEK_MODEL:deepseek-flash}
+  ollama-base-url: ${OLLAMA_BASE_URL:http://127.0.0.1:11434}
+  embedding-model: ${EMBEDDING_MODEL:bge-m3}
+  mcp-base-url: ${MCP_BASE_URL:http://127.0.0.1:8081}
+  mcp-endpoint: ${MCP_ENDPOINT:/mcp}
+  request-timeout-seconds: ${MODEL_TIMEOUT_SECONDS:90}
+logging:
+  level:
+    org.springframework.ai: WARN
