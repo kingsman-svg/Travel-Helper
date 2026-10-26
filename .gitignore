@@ -11,8 +11,7 @@
 **/dist/
 **/coverage/
 *.tsbuildinfo
-.data/*
-!.data/.gitkeep
+.data/
 work/
 
 # Local releases and private desktop data
