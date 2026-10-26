@@ -26,6 +26,6 @@ onMounted(refresh);
       <button class="probe-button" :disabled="!!active || !state" @click="run(item.type)">{{ active === item.type ? '正在验证…' : '验证连接' }}<span>↗</span></button>
       <div v-if="results[item.type]" class="probe-result" :class="results[item.type]?.status" role="status"><strong>{{ results[item.type]?.message }}</strong><small>{{ results[item.type]?.durationMs }} ms</small><details><summary>查看验证结果</summary><pre>{{ JSON.stringify(results[item.type]?.details, null, 2) }}</pre></details></div>
     </article></div>
-    <p class="connection-note">模型验证会发起真实请求；MCP当前提供服务信息。天气、地点和路线将在后续里程碑接入。</p>
+    <p class="connection-note">模型验证会发起真实 API 请求。智能规划已通过 MCP 接入 Open-Meteo 天气、Photon 地点和 Valhalla 道路路线，覆盖杭州、苏州、上海。天气支持未来约两周预报；路线为估算，不含实时路况与公交班次。公开服务可能限流或暂时不可用。</p>
   </section>
 </template>

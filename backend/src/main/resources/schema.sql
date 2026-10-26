@@ -53,3 +53,18 @@ CREATE TABLE IF NOT EXISTS knowledge_index_state (
     generation VARCHAR(36) NOT NULL,
     updated_at VARCHAR(40) NOT NULL
 );
+CREATE TABLE IF NOT EXISTS agent_runs (
+    id VARCHAR(36) PRIMARY KEY,
+    conversation_id VARCHAR(36) NOT NULL REFERENCES conversations(id),
+    status VARCHAR(30) NOT NULL,
+    code VARCHAR(60),
+    message VARCHAR(500),
+    started_at VARCHAR(40) NOT NULL,
+    finished_at VARCHAR(40)
+);
+CREATE TABLE IF NOT EXISTS agent_events (
+    execution_id VARCHAR(36) NOT NULL REFERENCES agent_runs(id),
+    seq BIGINT NOT NULL,
+    event_json CLOB NOT NULL,
+    PRIMARY KEY(execution_id,seq)
+);
