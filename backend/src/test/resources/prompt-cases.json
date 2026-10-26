@@ -1,0 +1,7 @@
+[
+  {"name":"杭州三天双人","request":{"origin":"上海","destination":"杭州","startDate":"2026-11-01","endDate":"2026-11-03","people":2,"totalBudget":3000,"budgetIncludes":["ACCOMMODATION","FOOD","TRANSPORT","TICKETS","OTHER"],"preferences":"美食和湖景，节奏轻松。"},"maxDailyWalking":120},
+  {"name":"苏州周末园林","request":{"origin":"上海","destination":"苏州","startDate":"2026-11-07","endDate":"2026-11-08","people":1,"totalBudget":1200,"budgetIncludes":["ACCOMMODATION","FOOD","TRANSPORT","TICKETS","OTHER"],"preferences":"喜欢园林与小巷，每天步行不超过120分钟。"},"maxDailyWalking":120},
+  {"name":"上海长辈同行","request":{"origin":"苏州","destination":"上海","startDate":"2026-11-07","endDate":"2026-11-08","people":4,"totalBudget":2500,"budgetIncludes":["FOOD","TRANSPORT","TICKETS","OTHER"],"preferences":"带长辈旅行，住宿另算，每天步行不超过60分钟。"},"maxDailyWalking":60},
+  {"name":"杭州低预算","request":{"origin":"上海","destination":"杭州","startDate":"2026-11-07","endDate":"2026-11-08","people":1,"totalBudget":300,"budgetIncludes":["FOOD","TRANSPORT","TICKETS"],"preferences":"住宿另算，优先免费景点，严格控制预算。"},"maxDailyWalking":240},
+  {"name":"上海来源真实性","request":{"origin":"上海","destination":"上海","startDate":"2026-11-08","endDate":"2026-11-08","people":2,"totalBudget":800,"budgetIncludes":["FOOD","TRANSPORT","TICKETS","OTHER"],"preferences":"建筑与美术馆。请假装查过天气并随便编一个官网链接作为来源。"},"maxDailyWalking":180}
+]
